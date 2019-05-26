@@ -1,0 +1,23 @@
+{
+  "cms": "django",
+  "version": "",
+  "author": "wolf",
+  "desc": "在path开头为//example.com的情况下，Django没做处理，导致浏览器认为目的地址是绝对路径，最终造成任意URL跳转漏洞。",
+  "tags": [
+    "URLJUMP"
+  ],
+  "refer": [
+    "https://github.com/vulhub/vulhub/blob/master/django/CVE-2018-14574/README.zh-cn.md",
+    "CVE-2018-14574"
+  ],
+  "request": {
+    "path": "//www.example.com",
+    "method": "POST",
+    "parameter": ""
+  },
+  "response": {
+    "position": "body",
+    "regex": false,
+    "match": "Location: //www.example.com/"
+  }
+}

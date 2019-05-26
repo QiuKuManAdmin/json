@@ -1,0 +1,23 @@
+{
+  "cms": "discuz",
+  "version": "",
+  "author": "wolf",
+  "desc": "Discuz! x3.0 /static/image/util/focus.swf 存在Flash XSS漏洞",
+  "tags": [
+    "XSS"
+  ],
+  "refer": [
+    "",
+    ""
+  ],
+  "request": {
+    "path": "/static/image/util/focus.swf",
+    "method": "POST",
+    "parameter": ""
+  },
+  "response": {
+    "position": "body",
+    "regex": false,
+    "match": "c16a7c6143f098472e52dd13de85527f"
+  }
+}

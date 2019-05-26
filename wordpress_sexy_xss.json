@@ -1,0 +1,23 @@
+{
+  "cms": "wordpress",
+  "version": "",
+  "author": "wolf",
+  "desc": "WordPress Sexy Squeeze Pages Plugin 存在反射型XSS漏洞",
+  "tags": [
+    "XSS"
+  ],
+  "refer": [
+    "",
+    ""
+  ],
+  "request": {
+    "path": "/wp-content/plugins/instasqueeze/lp/index.php?id=\"/><test>test(666)</test>",
+    "method": "POST",
+    "parameter": ""
+  },
+  "response": {
+    "position": "body",
+    "regex": false,
+    "match": "/><test>test(666)</test>"
+  }
+}

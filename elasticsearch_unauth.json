@@ -1,0 +1,23 @@
+{
+  "cms": "docker",
+  "version": "",
+  "author": "wolf",
+  "desc": "未授权访问导致数据信息泄露，部分版本或插件存在漏洞，严重可导致服务器被入侵。",
+  "tags": [
+    "UNAUTH"
+  ],
+  "refer": [
+    "",
+    ""
+  ],
+  "request": {
+    "path": "/_cat",
+    "method": "POST",
+    "parameter": ""
+  },
+  "response": {
+    "position": "body",
+    "regex": false,
+    "match": "/_cat/master"
+  }
+}

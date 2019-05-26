@@ -1,0 +1,23 @@
+{
+  "cms": "weblogic",
+  "version": "",
+  "author": "wolf",
+  "desc": "配置中启用 Web 服务测试页后，未授权的两个页面存在任意上传getshell漏洞，利用该漏洞可以上传任意jsp文件，进而获取服务器权限。",
+  "tags": [
+    "RCE"
+  ],
+  "refer": [
+    "https://github.com/vulhub/vulhub/tree/master/weblogic/CVE-2018-2894",
+    "CVE-2018-2894"
+  ],
+  "request": {
+    "path": "/ws_utc/config.do",
+    "method": "POST",
+    "parameter": ""
+  },
+  "response": {
+    "position": "body",
+    "regex": false,
+    "match": "Work Home Dir"
+  }
+}

